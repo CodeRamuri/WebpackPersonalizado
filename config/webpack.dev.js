@@ -7,7 +7,7 @@ const devConfig = {
   mode: "development",
   devServer: {
     port: 3000,
-    contentBase: "../dist",
+    contentBase: "../produccion",
     open: "brave-browser",
     hot: true,
   },
@@ -19,8 +19,8 @@ const devConfig = {
     rules: 
     [
       {
-        use: ["style-loader","css-loader","sass-loader"],
-        test: /.(css|sass|scss)$/,
+        use: ["style-loader","css-loader","stylus-loader"],
+        test: /.(css|styl)$/,
       }
     ]
   }

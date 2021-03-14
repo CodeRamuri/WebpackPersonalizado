@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './desarrollo/index.js',
   output: 
   {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../produccion'),
     filename: '[name].[contenthash].js',
     publicPath: ''
   },
@@ -35,7 +35,7 @@ module.exports = {
     new HtmlWebpackPlugin
     (
      {
-      template: './public/index.html',
+      template: './desarrollo/index.html',
      }
     )
   ]
