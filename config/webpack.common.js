@@ -20,6 +20,10 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.pug$/,
+        loader: 'pug-loader'
+      },
+      {
         type: 'asset',
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
       },
@@ -35,7 +39,7 @@ module.exports = {
     new HtmlWebpackPlugin
     (
      {
-      template: './desarrollo/index.html',
+      template: './desarrollo/index.pug',
      }
     )
   ]
