@@ -8,7 +8,8 @@ module.exports = {
   {
     path: path.resolve(__dirname, '../produccion'),
     filename: '[name].[contenthash].js',
-    publicPath: ''
+    publicPath: '',
+    assetModuleFilename: 'img/[name][ext]'
   },
   module: 
   {
@@ -24,7 +25,7 @@ module.exports = {
         loader: 'pug-loader'
       },
       {
-        type: 'asset',
+        type: 'asset/resource',
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
       },
     ],
