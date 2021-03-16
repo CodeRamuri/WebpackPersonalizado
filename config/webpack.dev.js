@@ -1,4 +1,3 @@
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const { HotModuleReplacementPlugin } = require("webpack");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common");
@@ -12,7 +11,7 @@ const devConfig = {
     hot: true,
   },
   target: "web",
-  plugins: [new HotModuleReplacementPlugin(), new ReactRefreshWebpackPlugin()],
+  plugins: [new HotModuleReplacementPlugin()],
   devtool: "eval-source-map",
   module: 
   {

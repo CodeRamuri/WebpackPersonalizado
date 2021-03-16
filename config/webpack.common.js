@@ -17,7 +17,7 @@ module.exports = {
     [
       {
         use: 'babel-loader',
-        test: /.(js|jsx)$/,
+        test: /.(js)$/,
         exclude: /node_modules/
       },
       {
@@ -32,7 +32,7 @@ module.exports = {
   },
   resolve:
   {
-    extensions: ['.js','.jsx', '.json']
+    extensions: ['.js','.json']
   },
   plugins: 
   [
