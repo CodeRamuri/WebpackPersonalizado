@@ -1,3 +1,4 @@
+const CopyPlugin = require('copy-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const { CleanWebpackPlugin  } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -73,6 +74,26 @@ module.exports = {
      {
       template: './desarrollo/index.pug',
      }
-    )
+    ),
+    new CopyPlugin({
+      patterns: 
+      [
+        {
+          from: path.resolve(__dirname, '../desarrollo/asset/*'),
+          to: path.resolve(__dirname, '../produccion/asset/[name][ext]'),
+          noErrorOnMissing: false
+        },
+        {
+          from: path.resolve(__dirname, '../desarrollo/productos.json'),
+          to: path.resolve(__dirname, '../produccion/[name][ext]'),
+          noErrorOnMissing: false
+        },
+        {
+          from: path.resolve(__dirname, '../desarrollo/README.md'),
+          to: path.resolve(__dirname, '../produccion/[name][ext]'),
+          noErrorOnMissing: false
+        }       
+      ]
+    })   
   ]
 }
